@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>    
+<meta charset="utf-8">
+<title>SIGNIN FORM</title>
+ <link rel="stylesheet" href="styleRegister.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+   
+<script>
+         
+      function CheckPassword(inputtxt) { 
+        var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+        
+        if(inputtxt.value.match(passw)) 
+        { 
+        alert('Thankyou ')
+        return true;
+        }
+        
+        else if(document.getElementById(pass) == "" || document.getElementById(pass) == null){
+          return false;
+        }
+        
+        else
+        
+        { 
+        alert('Sequence is not correct')
+        return false;
+        }
+        
+        }
+
+
+        function lettersOnly(input) 
+     {
+     var regx = /[^a-z]/gi;
+     input.value = input.value.replace(regx, "");
+      }
+      
+    </script>
+
+    
+    
+  </head>
+  <body>
+<div class="login-box" style="margin-top: 100px;">
+  <h1>SIGNIN</h1>
+
+  <div id="error" style="color: azure; font-size: 50px;"></div>
+  
+  <form name="form" action="#">
+ 
+
+    
+  <div class="textbox">
+    <input type="text" id="Email" placeholder="Email EX.(abc123@xyz.com)" pattern="{a-z}{0-9}@{a-z}.com" required>
+  </div>
+
+
+  <div class="textbox">
+        <input type="password" name="pass" placeholder="Password" required> 
+      </div>
+
+
+  <Button style="margin-top: 80px;" type="submit" class="btn" onclick="CheckPassword(document.form.pass)">SUBMIT</Button>
+  </div>
+</form>
+  </body>
+</html>
+
